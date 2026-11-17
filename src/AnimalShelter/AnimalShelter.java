@@ -34,6 +34,37 @@ public class AnimalShelter {
 
         if (dogs.isEmpty() && cats.isEmpty()) {
             System.out.println("No animals available");
+        } else if (dogs.isEmpty()) {
+            dequeueCat();
+        } else if (cats.isEmpty()) {
+            dequeueDog();
+        } else if (dogs.peek().order < cats.peek().order) {
+            dequeueDog();
+        } else {
+            dequeueCat();
+        }
+    }
+
+    // Adopt the oldest dog //
+    public void dequeueDog() {
+
+        if (dogs.isEmpty()) {
+            System.out.println("No dogs available");
+        } else {
+            Animal dog = dogs.poll();
+            System.out.println("Adopted dog: " + dog.name);
+        }
+    }
+
+    // Adopt the oldest cat //
+    public void dequeueCat() {
+
+        if (cats.isEmpty()) {
+            System.out.println("No cats available");
+        } else {
+            Animal cat = cats.poll();
+            System.out.println("Adopted cat: " + cat.name);
         }
     }
 }
+
