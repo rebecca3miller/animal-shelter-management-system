@@ -18,9 +18,7 @@ public class AnimalShelter {
             Animal animal = new Animal(name, "Dog", order);
             dogs.offer(animal);
             order++;
-        }
-
-        if (type.equalsIgnoreCase("cat")) {
+        } else if  (type.equalsIgnoreCase("cat")) {
             Animal animal = new Animal(name, "Cat", order);
             cats.offer(animal);
             order++;

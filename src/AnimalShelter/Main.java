@@ -43,11 +43,11 @@ public class Main {
         // Test shelter with only dogs //
         AnimalShelter dogShelter = new AnimalShelter();
 
-        catShelter.enqueue("Buddy", "dog");
-        catShelter.enqueue("Max", "dog");
+        dogShelter.enqueue("Buddy", "dog");
+        dogShelter.enqueue("Max", "dog");
 
-        catShelter.dequeueAny();
-        catShelter.dequeueAny();
+        dogShelter.dequeueAny();
+        dogShelter.dequeueAny();
 
         // Testing first in first out //
         AnimalShelter fifoShelter = new AnimalShelter();
